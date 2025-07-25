@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.back-image {
+    background-image: url('/asset-54.jpg');
+    background-size: cover !important;
+    background-position: center center !important;
+    position: fixed;
+    filter: blur(6px);
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.back-image:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgb(10, 14, 23);
+    background: linear-gradient(90deg, rgba(10, 14, 23, 0.6) 0%, rgba(10, 14, 23, 0.6) 100%);
+    z-index: 9;
+}
+
+#pms_login {
+    padding: 30px;
+    background: #161616;
+    position: relative;
+    z-index: 99999;
+    width: 500px;
+    display: inline-block;
+    text-align: left;
+}
+
+#pms_login h4,
+#pms_register-form h4,
+#pms_recover_password_form h4 {
+    border-bottom: 1px solid #221f1f;
+    position: relative;
+    margin: 0px 0 20px 0;
+    padding: 0 0 10px 0;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-style: normal;
+    line-height: 36px;
+    color: #fff;
+}
+
+#pms_login h4:before,
+#pms_register-form h4:before,
+#pms_recover_password_form h4:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: inline-block;
+    width: 100px;
+    height: 3px;
+    background: #e50916;
+}
+
+#pms_login p {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#pms_login p label {
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+input {
+    background: #221f1f;
+    border: 1px solid #221f1f;
+    color: #fff;
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    padding: 0 15px;
+    height: 54px;
+    line-height: 54px;
+    outline: none;
+    border-radius: 0px;
+    transition: all 0.5s ease-in-out;
+
+}
+
+input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    float: none;
+    margin-right: 5px;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="submit"] {
+    padding: 8px 30px;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    background: #e50916;
+    text-transform: capitalize;
+    color: #fff !important;
+    display: inline-block;
+    border: none;
+    width: auto;
+    height: auto;
+    line-height: 2;
+    text-transform: uppercase;
+    border-radius: 0px;
+    transition: all 0.5s ease-in-out;
+}
+
+.ant-form-item-label >label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    height: 32px;
+    color: #fff !important;
+    font-size: 18px !important;
+    font-family: 'Jost', sans-serif !important;
+}
+.ant-input-outlined {
+    background: #221f1f;
+    outline: none !important;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    font-size: 18px;
+}
+.ant-input-outlined:focus, :where(.css-dev-only-do-not-override-7t2xvq).ant-input-outlined:focus-within {
+    border-color:#e50916 !important;
+    background-color: #221f1f !important;
+    outline: none !important;
+    border: none !important;
+}
+.ant-input-outlined:hover{
+    background-color: #221f1f;
+}
+.ant-btn-variant-outlined:disabled, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed:disabled, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-outlined.ant-btn-disabled, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed.ant-btn-disabled {
+    cursor: not-allowed;
+    color: #fff ;
+    background: rgba(0, 0, 0, 0.04);
+    outline: none !important;
+    border: none !important;
+}
+
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-solid:disabled, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-solid.ant-btn-disabled {
+
+    color: #fff;
+
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+    
+    border: 1px solid #d9d9d9;
+    cursor: pointer !important;
+    background: #221f1f;
+    
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector span{
+    color: #fff !important;
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-select .ant-select-arrow {
+    color: #fff;
+}
