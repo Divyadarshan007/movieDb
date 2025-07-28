@@ -2,7 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+*{
+    font-family: 'Jost', sans-serif !important;
+}
 .back-image {
     background-image: url('/asset-54.jpg');
     background-size: cover !important;
@@ -94,7 +96,6 @@ input {
     outline: none;
     border-radius: 0px;
     transition: all 0.5s ease-in-out;
-
 }
 
 input[type="checkbox"] {
@@ -123,7 +124,7 @@ input[type="submit"] {
     transition: all 0.5s ease-in-out;
 }
 
-.ant-form-item-label >label {
+.ant-form-item-label>label {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -133,6 +134,7 @@ input[type="submit"] {
     font-size: 18px !important;
     font-family: 'Jost', sans-serif !important;
 }
+
 .ant-input-outlined {
     background: #221f1f;
     outline: none !important;
@@ -141,39 +143,71 @@ input[type="submit"] {
     color: #fff;
     font-size: 18px;
 }
-.ant-input-outlined:focus, :where(.css-dev-only-do-not-override-7t2xvq).ant-input-outlined:focus-within {
-    border-color:#e50916 !important;
+
+.ant-input-outlined:focus,
+:where(.css-dev-only-do-not-override-7t2xvq).ant-input-outlined:focus-within {
+    border-color: #e50916 !important;
     background-color: #221f1f !important;
     outline: none !important;
     border: none !important;
 }
-.ant-input-outlined:hover{
+
+.ant-input-outlined:hover {
     background-color: #221f1f;
 }
-.ant-btn-variant-outlined:disabled, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed:disabled, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-outlined.ant-btn-disabled, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed.ant-btn-disabled {
+
+.ant-btn-variant-outlined:disabled,
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed:disabled,
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-outlined.ant-btn-disabled,
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed.ant-btn-disabled {
     cursor: not-allowed;
-    color: #fff ;
+    color: #fff;
     background: rgba(0, 0, 0, 0.04);
     outline: none !important;
     border: none !important;
 }
 
 
-:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-solid:disabled, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-solid.ant-btn-disabled {
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-solid:disabled,
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-solid.ant-btn-disabled {
 
     color: #fff;
 
 }
+
 :where(.css-dev-only-do-not-override-7t2xvq).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
-    
+
     border: 1px solid #d9d9d9;
     cursor: pointer !important;
     background: #221f1f;
-    
+
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector span{
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector span {
     color: #fff !important;
 }
+
 :where(.css-dev-only-do-not-override-7t2xvq).ant-select .ant-select-arrow {
     color: #fff;
+}
+
+.bg-image {
+    background-image: url('/asset-37.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: rgb(34, 31, 31);
+    background: linear-gradient(to right, rgba(34, 31, 31, 1) 0%, rgba(34, 31, 31, 0.4) 100%);
 }
