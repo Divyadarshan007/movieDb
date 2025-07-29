@@ -1,25 +1,5 @@
 {
   "movies": [
-    {
-      "id": "40f5",
-      "title": "sdd",
-      "url": "dev.jpg",
-      "genre": "Drama",
-      "desc": "Hello Toast UI Editor"
-    },
-    {
-      "id": "61db",
-      "title": "dev",
-      "url": "https://m.media-amazon.com/images/M/MV5BN2M2MjQwZmQtMWQ5ZS00NmYwLWEwZmMtZmM1ZWM3MGMzOGU3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-      "genre": "Romance",
-      "desc": "Hello Toast UI Editor"
-    },
-    {
-      "id": "dd73",
-      "title": "dev",
-      "url": "https://m.media-amazon.com/images/M/MV5BN2M2MjQwZmQtMWQ5ZS00NmYwLWEwZmMtZmM1ZWM3MGMzOGU3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-      "genre": "Romance",
-      "desc": "Hello Toast UI Editor"
-    }
+    
   ]
 }

@@ -21,9 +21,7 @@ const Header = () => {
                             <Link>Admin</Link>
                         </li>
                         <li className="">
-                            <Link>
-                                <button className="px-8 py-1 text-xl font-normal text-white bg-[#e50916]">Login</button>
-                            </Link>
+                            <button className="px-8 py-1 text-xl font-normal text-white bg-[#e50916]">Login</button>
                         </li>
                     </ul>
                 </div>
