@@ -3,11 +3,12 @@ import { Editor } from '@toast-ui/react-editor';
 import '@toast-ui/editor/dist/toastui-editor.css';
 import axios from 'axios';
 import { AppContext } from '../App';
-import { Link, useNavigate } from 'react-router-dom';
-const AddMovie = () => {
+import { Link, useNavigate, useParams } from 'react-router-dom';
+const EditMovie = () => {
 
     const { movies, setMovies } = useContext(AppContext);
     const editorRef = useRef();
+    const { id } = useParams()
     const navigate = useNavigate();
     let instance;
     let markdown = useRef(null);
@@ -19,7 +20,11 @@ const AddMovie = () => {
     let URL = "http://localhost:8215/movies"
     const fetchData = async () => {
         const { data } = await axios.get(URL)
+       let obj= data.find((movie)=>{
+            return movie.id === id
+        })
         setMovies(data)
+        setInput(obj)
     }
     useEffect(() => {
         fetchData();
@@ -39,9 +44,8 @@ const AddMovie = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const addData = async () => {
-            console.log(markdown.current);
             const value = { ...input, desc: markdown.current }
-            const { data } = await axios.post(URL, value);
+            const { data } = await axios.put(`${URL}/${id}`, value);
             setMovies([...movies, data])
             navigate("/show-data")
         }
@@ -55,7 +59,7 @@ const AddMovie = () => {
                     showModal ? <div>
                         <div>
                             <Editor
-                                initialValue="Hello Toast UI Editor"
+                                initialValue={`${input.desc}`}
                                 previewStyle="vertical"
                                 height="500px"
                                 initialEditType="wysiwyg"
@@ -78,10 +82,10 @@ const AddMovie = () => {
                                 <label htmlFor="user_pass">URL</label>
                                 <input required value={input.url} autoComplete='off' onChange={handleChange} type="text" name="pwd" id="url" className="input" size={20} />
                             </p>
-                                <div className='w-10 h-10 overflow-hidden my-3'>
-                                    {input.url && <img src={input.url} alt="" />}
-                                    
-                                </div>
+                            <div className='w-10 h-10 overflow-hidden my-3'>
+                                {input.url && <img src={input.url} alt="" />}
+
+                            </div>
                             <p className="login-password">
                                 <select name="" id="genre" className='bg-[#221f1f] px-7 py-3 text-white' value={input.genre} required onChange={handleChange}>
                                     <option value="">Select genre</option>
@@ -99,7 +103,7 @@ const AddMovie = () => {
                             </div>
 
                             <p className="login-submit">
-                                <input type="submit" name="wp-submit" id="wp-submit" className="button button-primary" defaultValue="Add" />
+                                <input type="submit" name="wp-submit" id="wp-submit" className="button button-primary" defaultValue="Edit" />
                                 <input type="hidden" name="redirect_to" />
                             </p>
                         </form>
@@ -109,4 +113,4 @@ const AddMovie = () => {
         </div>
     );
 };
-export default AddMovie;
+export default EditMovie;

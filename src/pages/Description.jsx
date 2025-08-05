@@ -1,27 +1,39 @@
+import { useContext, useEffect, useState } from "react"
+import { AppContext } from "../App"
+import axios from "axios"
+import { useParams } from "react-router-dom"
+
 const Description = () => {
+    const { movies, setMovies } = useContext(AppContext)
+    const { id } = useParams();
+    const [obj, setObj] = useState({})
+    const fetchData = async () => {
+        const { data } = await axios.get("http://localhost:8215/movies")
+        setMovies(data)
+        let movieData = data.find((movie) => {
+            return movie.id == id;
+        })
+        console.log(movieData);
+        
+        setObj(movieData);
+    }
+    useEffect(() => {
+        fetchData()
+    }, [])
+    
+    
     return (
         <section className="bg-[#161616] h-screen">
             <div className="container mx-auto flex justify-center h-screen items-center">
-                <div className="bg-[#221f1f] h-[500px] w-[500px]">
-                    <div>
-                        <h2 className="text-white">THE EXPRESS</h2>
-                        <div>
-                            <span><img src="/asset-2.png" alt="" /></span>
-                        </div>
-                        <p className="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita accusamus est fuga qui quibusdam unde natus fugiat architecto dolorum corporis,</p>
+                <div className="bg-[#221f1f] p-[30px] flex justify-between">
+                  
 
-                        <div>
-                            <div>
-                                <span className="text-[#e50916]">Cast</span><span className="text-white">:koi bhi</span>
-                            </div>
-                            <div>
-                                <span className="text-[#e50916]">Genre</span><span className="text-white">:koi bhi</span>
-                            </div>
-                            <div>
-                                <span className="text-[#e50916]">Tag</span><span className="text-white">:koi bhi</span>
-                            </div>
-                        </div>
-                    </div>
+                 <div className="text-editor w-1/2" dangerouslySetInnerHTML={{ __html: obj.desc }}>
+                     
+                 </div>
+                 <div className="text-editor w-1/2 flex justify-end">
+                       <img src={`${obj.url}`} alt="" className="h-[400px]" />
+                 </div>
                 </div>
 
             </div>

@@ -6,6 +6,7 @@ import Header from "./components/Header"
 import ShowData from "./pages/ShowData"
 import { createContext, useState } from "react"
 import Description from "./pages/Description"
+import EditMovie from "./pages/EditMovie"
 export const AppContext = createContext();
 const App = () => {
   const [movies, setMovies] = useState([])
@@ -19,7 +20,8 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/add-movie" element={<AddMovie />} />
             <Route path="/show-data" element={<ShowData />} />
-            <Route path="/desc" element={<Description/>} />
+            <Route path="/desc/:id" element={<Description/>} />
+            <Route path="/edit-movie/:id" element={<EditMovie/>} />
           </Routes>
         </BrowserRouter>
       </AppContext.Provider>

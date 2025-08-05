@@ -2,9 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+
+* {
     font-family: 'Jost', sans-serif !important;
 }
+
 .back-image {
     background-image: url('/asset-54.jpg');
     background-size: cover !important;
@@ -210,4 +212,71 @@ input[type="submit"] {
     display: inline-block;
     background: rgb(34, 31, 31);
     background: linear-gradient(to right, rgba(34, 31, 31, 1) 0%, rgba(34, 31, 31, 0.4) 100%);
+}
+
+
+.text-editor h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 62px;
+    font-weight: 700;
+    color: #fff !important;
+    margin-bottom: 10px;
+}
+
+.text-editor p {
+    font-size: 18px;
+    color: #cecfd1 !important;
+    margin-bottom: 20px;
+}
+
+.text-editor a {
+    font-size: 16px;
+    text-decoration: underline;
+    color: #57B9FF !important;
+    margin-bottom: 20px;
+}
+
+.text-editor ul li {
+    font-size: 16px;
+    list-style: disc;
+    color: #fff !important;
+    margin-bottom: 5px;
+}
+
+.text-editor ol li {
+    font-size: 16px;
+    list-style: decimal;
+    color: #fff !important;
+    margin-bottom: 5px;
+}
+
+.text-editor table {
+    width: 100%;
+    background-color: #221f1f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.text-editor table thead th {
+    background-color: #161616;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.text-editor table tbody td {
+    padding: 14px 18px;
+    font-size: 15px;
+}
+
+.text-editor table td p,
+th p {
+    margin: 0;
 }
