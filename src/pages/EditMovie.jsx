@@ -27,7 +27,6 @@ const EditMovie = () => {
             return movie.id == id;
         })
         setInput(obj)
-        console.log(obj);
 
     }
     useEffect(() => {
@@ -138,13 +137,13 @@ const EditMovie = () => {
                         >
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="flex items-center justify-between">
-                                    <h4 className="text-2xl font-semibold">Edit Movie</h4>
+                                    <h4 className="text-2xl !text-white font-semibold">Edit Movie</h4>
                                     <Link className="text-2xl hover:text-[#E50916]" to="/show-data">
                                         ×
                                     </Link>
                                 </div>
 
-                                {/* Title */}
+          
                                 <div className="flex flex-col">
                                     <label htmlFor="title" className="mb-1">Title</label>
                                     <input
@@ -157,7 +156,7 @@ const EditMovie = () => {
                                     {errors.title && <span className="text-red-500 text-sm">{errors.title}</span>}
                                 </div>
 
-                                {/* URL */}
+               
                                 <div className="flex flex-col">
                                     <label htmlFor="url" className="mb-1">Image URL</label>
                                     <input
@@ -170,14 +169,14 @@ const EditMovie = () => {
                                     {errors.url && <span className="text-red-500 text-sm">{errors.url}</span>}
                                 </div>
 
-                                {/* Image Preview */}
+                         
                                 {input.url && (
                                     <div className="w-20 h-20 overflow-hidden mt-2 rounded border border-gray-600">
                                         <img src={input.url} alt="preview" className="object-cover w-full h-full" />
                                     </div>
                                 )}
 
-                                {/* Genre */}
+                
                                 <div className="flex flex-col">
                                     <label htmlFor="genre" className="mb-1">Genre</label>
                                     <select
@@ -198,7 +197,7 @@ const EditMovie = () => {
                                     {errors.genre && <span className="text-red-500 text-sm">{errors.genre}</span>}
                                 </div>
 
-                                {/* Description */}
+             
                                 <button
                                     type="button"
                                     className="w-full bg-[#e50916] hover:bg-[#c40813] text-white px-5 py-2 rounded transition"
@@ -208,7 +207,7 @@ const EditMovie = () => {
                                 </button>
                                 {errors.description && <span className="text-red-500 text-sm">{errors.description}</span>}
 
-                                {/* Submit */}
+                      
                                 <button
                                     type="submit"
                                     className="w-full bg-[#444] hover:bg-[#555] text-white px-5 py-2 rounded transition"

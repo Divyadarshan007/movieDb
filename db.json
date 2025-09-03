@@ -1,11 +1,3 @@
 {
-  "movies": [
-    {
-      "id": "4f22",
-      "title": "dev",
-      "url": "https://as2.ftcdn.net/v2/jpg/05/71/35/05/1000_F_571350566_RVbv6rnwwxFkrhmdDPQTU7XHZnzmPhug.jpg",
-      "genre": "Comedy",
-      "desc": "<p><br></p>"
-    }
-  ]
+  "movies": []
 }

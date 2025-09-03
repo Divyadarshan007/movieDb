@@ -216,6 +216,21 @@ th p {
     margin: 0;
 }
 
-.scrollbarWidth{
+.scrollbarWidth {
     scrollbar-width: none;
+}
+
+.toastui-editor-popup-body input {
+    margin-bottom: 20px;
+    background-color: white !important;
+    display: block
+}
+
+.toastui-editor-popup-body {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+}
+.toastui-editor-popup-body ul li h1,h2,h3,h4,h5,h6{
+    color: #161616 !important;
 }

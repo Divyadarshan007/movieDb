@@ -127,7 +127,7 @@ const AddMovie = () => {
                         >
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="flex items-center justify-between">
-                                    <h4 className="text-2xl font-semibold">Add Movie</h4>
+                                    <h4 className="text-2xl !text-white font-semibold">Add Movie</h4>
                                     <Link className="text-2xl hover:text-[#E50916]" to="/">
                                         ×
                                     </Link>
