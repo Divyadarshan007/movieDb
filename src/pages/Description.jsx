@@ -48,7 +48,7 @@ const Description = () => {
                     }
                 </div>
 
-                <div className="w-full lg:w-1/2 flex justify-center">
+                <div className="w-full lg:w-1/2 text-white flex justify-center">
                     <img
                         src={`${obj.url}`}
                         alt="Movie Visual"
